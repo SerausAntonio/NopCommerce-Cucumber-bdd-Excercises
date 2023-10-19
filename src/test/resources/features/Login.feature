@@ -8,6 +8,6 @@
       And Click on Login
       Then Page Title should be "Dashboard / nopCommerce administration"
       When User click on Log out link
-      Then Page Title should be "Admin area demo"
+      Then The title on the Page should be "Admin area demo"
       And close browser
 

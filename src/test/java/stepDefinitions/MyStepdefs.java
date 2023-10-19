@@ -42,11 +42,16 @@ public class MyStepdefs {
     @When("User click on Log out link")
     public void userClickOnLogOutLink() {
         driver.findElement(By.xpath("//*[text()='Logout']")).click();
-        System.out.println("User click on Log out link");
-    }
 
+    }
+    @Then("The title on the Page should be {string}")
+    public void theTitleOnThePageShouldBe(String title) {
+        String page_title= driver.findElement(By.xpath("//*[@class='page-title']")).getText();
+        Assert.assertTrue(page_title.equals(title));
+    }
     @And("close browser")
     public void closeBrowser() {
         driver.quit();
    }
+
 }
